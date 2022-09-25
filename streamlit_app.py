@@ -24,7 +24,7 @@ st.header("🍌🥭 Build Your Own Fruit Smoothie 🥝🍇")
 
 # List chooses what things to include 
 
-st.multiselect("Pick some fruits: ", list(my_fruit_list.index))
+st.multiselect("Pick some fruits: ", list(my_fruit_list.index), ["Avocado", "Strawberries"])
 
 
 
