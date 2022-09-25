@@ -20,4 +20,12 @@ st.text("🥑🍞 Avocado Toast")
 
 
 st.header("🍌🥭 Build Your Own Fruit Smoothie 🥝🍇")
+
+# List chooses what things to include 
+
+st.multiselect("Pick some fruits: ", list(my_fruit_list.index))
+
+
+
+
 st.dataframe(my_fruit_list)
