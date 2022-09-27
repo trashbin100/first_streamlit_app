@@ -38,6 +38,11 @@ streamlit.header("Fruityvice Fruit Advice!")
 #display on page
 st.dataframe(fruits_to_show)
 
+# Enter a selection
+fruit_choice = st.text_input("What fruit would you like information about?", "Kiwi")
+streamlit.write("The user entered", fruit_choice)
+
+
 # Creates a variable for internet response 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
