@@ -41,7 +41,7 @@ st.dataframe(fruits_to_show)
 # Creates a variable for internet response 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 streamlit.text(fruityvice_response)
 
 
