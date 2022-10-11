@@ -49,7 +49,30 @@ streamlit.dataframe(my_data_rows)
 # Allow End User to add a fruit to the list 
 add_my_fruit = st.text_input("What fruit would you like information about?", "jackfruit")
 streamlit.write("The user entered", add_my_fruit)
+
+
 # Shows the new section of Fruityvice Response 
+# Create a the repeatable code block (called a function)
+def get_fruityvice_data(this_fruit_choice):
+  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
+  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+  return fruityvice_normalized
+
+  # New Section to display fruityvice api response 
+streamlit.header("Fruityvice Fruit Advice!")
+
+try:
+  fruit_choice = streamlit.text_input("What fruit would you like information about?")
+  if not fruit_choice:
+    streamlit.error("PLease select a fruit to get information")
+  else:
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+    fruityvice_normalized = pandas.json_normalize(fruit_choice)
+    streamlit.dataframe(back_from_function)
+
+
+
+  
 streamlit.header("Fruityvice Fruit Advice!")
 # This code will not work correctly 
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
@@ -79,7 +102,7 @@ streamlit.write("The user entered", fruit_choice)
 
 
 # Creates a variable for internet response 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 streamlit.text(fruityvice_response)
