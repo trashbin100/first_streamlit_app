@@ -4,6 +4,7 @@ import pandas as pd
 import pandas
 import requests 
 import snowflake.connector
+from urllib.error import URLError
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()        #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
@@ -34,6 +35,8 @@ st.text("🥑🍞 Avocado Toast")
 
 
 st.header("🍌🥭 Build Your Own Fruit Smoothie 🥝🍇")
+# don't run anything while troublle shooting 
+#streamlit.stop()
 
 # List chooses what things to include 
 
