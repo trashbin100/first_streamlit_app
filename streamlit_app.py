@@ -99,8 +99,6 @@ try:
     streamlit.dataframe(back_from_function)
 
 
-
-  
 streamlit.header("Fruityvice Fruit Advice!")
 # This code will not work correctly 
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
