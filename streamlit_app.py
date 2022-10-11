@@ -41,7 +41,7 @@ fruits_selected = st.multiselect("Pick some fruits: ", list(my_fruit_list.index)
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 my_data_row = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_row)
+streamlit.dataframe(my_data_rows)
 
 # Shows the new section of Fruityvice Response 
 streamlit.header("Fruityvice Fruit Advice!")
