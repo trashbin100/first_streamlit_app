@@ -45,6 +45,7 @@ streamlit.dataframe(my_data_rows)
 
 # Allow End User to add a fruit to the list 
 add_my_fruit = st.text_input("What fruit would you like information about?", "jackfruit")
+streamlit.write("The user entered", add_my_fruit)
 # Shows the new section of Fruityvice Response 
 streamlit.header("Fruityvice Fruit Advice!")
 #display on page
