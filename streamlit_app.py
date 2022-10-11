@@ -48,6 +48,9 @@ add_my_fruit = st.text_input("What fruit would you like information about?", "ja
 streamlit.write("The user entered", add_my_fruit)
 # Shows the new section of Fruityvice Response 
 streamlit.header("Fruityvice Fruit Advice!")
+# This code will not work correctly 
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+
 #display on page
 st.dataframe(fruits_to_show)
 
