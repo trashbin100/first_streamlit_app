@@ -145,7 +145,8 @@ streamlit.write("The user entered", fruit_choice)
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-streamlit.text(fruityvice_response)
+# COMMENTED OUT line 149 (or right below a line to eliminate an error)
+#streamlit.text(fruityvice_response)
 
 
 # Make the JSON more Presentable 
