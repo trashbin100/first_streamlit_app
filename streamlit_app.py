@@ -45,7 +45,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 my_data_rows = my_cur.fetchall()
 
 streamlit.header("The fruit load list contains:")
-streamlit.dataframe(my_data_rows)
+# Trying to hide list unless button is pressed
+#streamlit.dataframe(my_data_rows)
 # Snowflake Related Functions 
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
