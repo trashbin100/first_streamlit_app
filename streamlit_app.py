@@ -11,7 +11,8 @@ my_cur = my_cnx.cursor()        #my_cur.execute("SELECT CURRENT_USER(), CURRENT_
 my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchone()
 streamlit.text("The fruit load list contains:")
-streamlit.text(my_data_row)
+# Get rid of to only have button list
+#streamlit.text(my_data_row)
 
 
 
