@@ -97,9 +97,9 @@ try:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruit_choice)
     streamlit.dataframe(back_from_function)
-finally:
-  print("Nothing returned") 
-  return None
+except URLError as e:
+  streamlit.error()
+
   #except URLError as e:
     #streamlit.error()
 
